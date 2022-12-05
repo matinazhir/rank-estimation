@@ -1,1 +1,10 @@
-# how much % you need to get
+from tests import columns, df, lessons, zarib, factor
+
+
+temp = []
+for i in range(6):
+    percentage = int(input("{}:\t".format(i+1)))
+    z = (percentage - lessons[columns[i]][0])/lessons[columns[i]][1]
+    t = (1000*z) + 5000
+    temp.append(t*lessons[columns[i]][2])
+print("Taraz:\t", round((sum(temp)/sum(zarib))/factor))
