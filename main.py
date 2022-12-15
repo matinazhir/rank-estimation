@@ -9,14 +9,6 @@ columns = ['Zaban', 'Khord', 'Kalan', 'Riazi', 'Amar', 'Doroos']
 df = pd.read_csv(data, ',', header=0)
 
 
-def mean(x):  # Calculate rounded mean of a column of dataframe
-    return round(np.mean(df[x]))
-
-
-def std(x):  # Calculate rounded standard deviation of a column of dataframe
-    return round(np.std(df[x]))
-
-
 def minmax(mean, std):  # Calculate the standard range of data of a column
     return regulator(str(mean - std)), regulator(str(mean + std)), regulator(str(mean))
 
@@ -42,8 +34,8 @@ def run():
     index = 0
     for lesson in columns:
         index += 1  # indexing lessons
-        rmean = mean(lesson)  # rounded mean
-        rstd = std(lesson)  # rounded std
+        rmean = round(np.mean(df[lesson]))  # rounded mean
+        rstd = round(np.std(df[lesson]))  # rounded std
         minstd, maxstd, rmean = minmax(rmean, rstd)  # calculate standard range
         s_print(lesson, rmean, minstd, maxstd, index)  # print the output
 
