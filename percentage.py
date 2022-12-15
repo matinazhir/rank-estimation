@@ -1,4 +1,4 @@
-from tests import columns, df, lessons, zarib, factor
+from factor import columns, df, lessons, zarib, factor
 
 
 temp = []
