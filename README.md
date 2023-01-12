@@ -10,7 +10,7 @@ to know how much you should to answer to get good grades. And you can enter your
 # How to Run
 
 1. Install python3, pip3, virtualenv, in your system.
-2. Clone the project ```git clone https://github.com/matinazhir/rank-estimation && cd rank-estimation```.
+2. Clone the project ```git clone https://github.com/matinazhir/rank-estimation.git && cd rank-estimation```.
 3. In the project folder create a virtual environment using ```python3 -m venv .yourenvname``` for linux and ```python -m venv .yourenvname``` for windows.
 4. Connect to your virtual environment using ```source .yourenvname/bin/activate```.
 5. From the project folder, install packages using ```pip install -r requirements.txt```.
